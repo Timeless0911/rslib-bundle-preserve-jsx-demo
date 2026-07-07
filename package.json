@@ -12,8 +12,8 @@
   },
   "exports": {
     ".": "./dist/index.js",
-    "./preserve-jsx-dep1": "./dist/vendor/preserve-jsx-dep1.jsx",
-    "./preserve-jsx-dep2": "./dist/vendor/preserve-jsx-dep2.jsx"
+    "./preserve-jsx-dep1": "./dist/vendor/preserve-jsx-dep1/index.jsx",
+    "./preserve-jsx-dep2": "./dist/vendor/preserve-jsx-dep2/index.jsx"
   },
   "files": [
     "dist"
