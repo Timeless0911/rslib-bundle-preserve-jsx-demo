@@ -1,0 +1,31 @@
+{
+  "name": "rslib-bundle-preserve-jsx-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.10.0",
+  "scripts": {
+    "build": "rslib",
+    "clean": "rm -rf dist node_modules pnpm-lock.yaml",
+    "demo": "pnpm build && pnpm verify",
+    "verify": "node scripts/verify.mjs"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./jsx-only-dep": "./dist/vendor/index.jsx"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "jsx-only-dep": "file:./fixtures/jsx-only-dep"
+  },
+  "peerDependencies": {
+    "react": "*"
+  },
+  "devDependencies": {
+    "@rsbuild/plugin-react": "^2.1.0",
+    "@rslib/core": "^0.23.2",
+    "react": "^19.2.7"
+  }
+}
