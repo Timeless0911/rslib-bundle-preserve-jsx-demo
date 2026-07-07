@@ -5,8 +5,6 @@ export default defineConfig({
   lib: [
     {
       id: 'main',
-      format: 'esm',
-      dts: false,
       source: {
         entry: {
           index: './src/index.jsx',
@@ -25,9 +23,7 @@ export default defineConfig({
     },
     {
       id: 'vendor-jsx-dep1',
-      format: 'esm',
       bundle: false,
-      dts: false,
       source: {
         entry: {
           index: './node_modules/preserve-jsx-dep1/**/*.jsx',
@@ -37,9 +33,6 @@ export default defineConfig({
         distPath: './dist/vendor/preserve-jsx-dep1',
         filename: {
           js: '[name].jsx',
-        },
-        externals: {
-          'preserve-jsx-dep1': false,
         },
       },
       plugins: [
@@ -52,9 +45,7 @@ export default defineConfig({
     },
     {
       id: 'vendor-jsx-dep2',
-      format: 'esm',
       bundle: false,
-      dts: false,
       source: {
         entry: {
           index: './node_modules/preserve-jsx-dep2/**/*.jsx',
@@ -64,9 +55,6 @@ export default defineConfig({
         distPath: './dist/vendor/preserve-jsx-dep2',
         filename: {
           js: '[name].jsx',
-        },
-        externals: {
-          'preserve-jsx-dep2': false,
         },
       },
       plugins: [
