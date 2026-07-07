@@ -12,13 +12,15 @@
   },
   "exports": {
     ".": "./dist/index.js",
-    "./jsx-only-dep": "./dist/vendor/index.jsx"
+    "./preserve-jsx-dep1": "./dist/vendor/preserve-jsx-dep1.jsx",
+    "./preserve-jsx-dep2": "./dist/vendor/preserve-jsx-dep2.jsx"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
-    "jsx-only-dep": "file:./fixtures/jsx-only-dep"
+    "preserve-jsx-dep1": "file:./fixtures/preserve-jsx-dep1",
+    "preserve-jsx-dep2": "file:./fixtures/preserve-jsx-dep2"
   },
   "peerDependencies": {
     "react": "*"

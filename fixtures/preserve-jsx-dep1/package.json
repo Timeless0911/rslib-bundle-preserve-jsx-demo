@@ -1,0 +1,10 @@
+{
+  "name": "preserve-jsx-dep1",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.jsx",
+  "module": "./index.jsx",
+  "exports": {
+    ".": "./index.jsx"
+  }
+}

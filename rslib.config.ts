@@ -15,9 +15,10 @@ export default defineConfig({
       output: {
         distPath: './dist',
         externals: {
-          // The main build does not inline the JSX dependency. It points to the
-          // separately emitted vendor file instead.
-          'jsx-only-dep': './vendor/index.jsx',
+          // The main build does not inline these JSX dependencies. Each one
+          // points to its separately emitted vendor file instead.
+          'preserve-jsx-dep1': './vendor/preserve-jsx-dep1.jsx',
+          'preserve-jsx-dep2': './vendor/preserve-jsx-dep2.jsx',
         },
       },
       plugins: [pluginReact()],
@@ -29,7 +30,8 @@ export default defineConfig({
       dts: false,
       source: {
         entry: {
-          index: './src/vendor/index.jsx',
+          'preserve-jsx-dep1': './src/vendor/preserve-jsx-dep1.jsx',
+          'preserve-jsx-dep2': './src/vendor/preserve-jsx-dep2.jsx',
         },
       },
       output: {
@@ -38,7 +40,8 @@ export default defineConfig({
           js: '[name].jsx',
         },
         externals: {
-          'jsx-only-dep': false,
+          'preserve-jsx-dep1': false,
+          'preserve-jsx-dep2': false,
         },
       },
       plugins: [

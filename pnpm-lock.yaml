@@ -8,9 +8,12 @@ importers:
 
   .:
     dependencies:
-      jsx-only-dep:
-        specifier: file:./fixtures/jsx-only-dep
-        version: file:fixtures/jsx-only-dep
+      preserve-jsx-dep1:
+        specifier: file:./fixtures/preserve-jsx-dep1
+        version: file:fixtures/preserve-jsx-dep1
+      preserve-jsx-dep2:
+        specifier: file:./fixtures/preserve-jsx-dep2
+        version: file:fixtures/preserve-jsx-dep2
     devDependencies:
       '@rsbuild/plugin-react':
         specifier: ^2.1.0
@@ -227,8 +230,11 @@ packages:
   '@tybys/wasm-util@0.10.3':
     resolution: {integrity: sha512-F3fo1MYrRJYL3zER0OUOmkutjr1Vp23m7OsSgp7nq4SP6OqX6C/56XFIPAl5bt3zaBRjmW7SGz3u/6LwFpYcOg==}
 
-  jsx-only-dep@file:fixtures/jsx-only-dep:
-    resolution: {directory: fixtures/jsx-only-dep, type: directory}
+  preserve-jsx-dep1@file:fixtures/preserve-jsx-dep1:
+    resolution: {directory: fixtures/preserve-jsx-dep1, type: directory}
+
+  preserve-jsx-dep2@file:fixtures/preserve-jsx-dep2:
+    resolution: {directory: fixtures/preserve-jsx-dep2, type: directory}
 
   react-refresh@0.18.0:
     resolution: {integrity: sha512-QgT5//D3jfjJb6Gsjxv0Slpj23ip+HtOpnNgnb2S5zU3CB26G/IDPGoy4RJB42wzFE46DRsstbW6tKHoKbhAxw==}
@@ -422,7 +428,9 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  jsx-only-dep@file:fixtures/jsx-only-dep: {}
+  preserve-jsx-dep1@file:fixtures/preserve-jsx-dep1: {}
+
+  preserve-jsx-dep2@file:fixtures/preserve-jsx-dep2: {}
 
   react-refresh@0.18.0: {}
 
